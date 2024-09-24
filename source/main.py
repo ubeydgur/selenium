@@ -44,12 +44,13 @@ class BandLeader():
         self.track_list = [t for t in discover_items
                            if t.location['x'] >= left_x and t.location['x'] < right_x]
         
-        for(i,track) in enumerate(self.track_list):
+        """for(i,track) in enumerate(self.track_list):
             print(f"[{i+1}]")
             lines = track.text.split("\n")
             print(f"Album  : {lines[0]}")
             print(f"Artist : {lines[1]}")
             print(f"Genre  : {lines[2]}\n")
+        """
         
 
     def more_tracks(self, click_button='next'):
@@ -71,7 +72,7 @@ class BandLeader():
             self.current_track_number = track
             self.track_list[self.current_track_number - 1].click()
         
-        sleep(1)
+        sleep(3)
 
         if self.is_playing():
             self._current_track_record = self.currently_playing()   
@@ -103,13 +104,13 @@ class BandLeader():
     def _maintain(self):
         while True:
             self._update_db()
-            sleep(20)
+            sleep(1)
 
     
     def _update_db(self):
         check = (self._current_track_record is not None 
-                and (self.database[-1] != self._current_track_record 
-                     or len(self.database) == 0)
+                and (len(self.database) == 0
+                     or self.database[-1] != self._current_track_record)
                 and self.is_playing())
         
         if check:
