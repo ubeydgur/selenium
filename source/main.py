@@ -124,3 +124,20 @@ class BandLeader():
 
             for entry in self.database:
                 dbwriter.writerow(list(entry))
+
+
+path = "/Users/ubeydgur/Projects/python/web-scraping-projects/track-storage-selenium/database.csv"
+
+if __name__ == "__main__":
+    band_leader = BandLeader(path)
+    
+    band_leader.play()
+    band_leader.more_tracks()
+    band_leader.tracks()
+
+    for num in range(len(band_leader.track_list)):
+        band_leader.play(num + 1)
+        sleep(2)
+
+    band_leader.save_db()
+    band_leader.driver.quit()
