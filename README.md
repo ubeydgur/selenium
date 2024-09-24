@@ -1,6 +1,6 @@
 # Track Storage Selenium
 
-Playing tracks on the bandcamp.com website, accessing more tracks, and saving information about the tracks listened to a database and exporting it to a .csv file.
+Playing tracks on the bandcamp.com website, accessing more tracks, and saving information about the tracks listened to a database and exporting it to a .csv file.`
 
 - Track Website: [bandcamp.com](https://bandcamp.com/)
   
@@ -12,7 +12,7 @@ Playing tracks on the bandcamp.com website, accessing more tracks, and saving in
   
 - The *database* can be updated and saved with the **_update_db** and **save_db** functions.
   
-- With the **_maintain** function and the **threading** library, the database is continuously updated in the background by *multi-processing*.
+- With the **_maintain** function and the **threading** library, the database is continuously updated in the background by `multi-processing`.
 
 ## Dependencies
 
