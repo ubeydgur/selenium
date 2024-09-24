@@ -31,6 +31,9 @@ class BandLeader():
         self.thread = Thread(target=self._maintain)
         self.thread.daemon = True
         self.thread.start()
+        
+        # multithreading was used to continuously update 
+        # the database in the backend while the code was running.
 
 
     def tracks(self):
@@ -97,6 +100,12 @@ class BandLeader():
             artist_detail = self.driver.find_element(By.CSS_SELECTOR, ".detail-artist > a")
             artist_name = artist_detail.text
             artist_url = artist_detail.get_attribute('href')
+            
+            # The reason CSS_SELECTOR is used here is because 
+            # the 'a' tag does not have a class.
+
+            # The use of '.' at the beginning indicates that it is a class 
+            # and the use of '>' after it indicates that 'a' is a child tag.
 
             return TrackRec(title, artist_name, artist_url, album_title, album_url) 
     
