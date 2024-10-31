@@ -18,7 +18,7 @@ Playing tracks on the bandcamp.com website, accessing more tracks, and saving in
 
 - [Selenium](https://selenium-python.readthedocs.io/)
 - [Threading](https://docs.python.org/3/library/threading.html#semaphore-example)
-- [csv](https://docs.python.org/3/library/csv.html)
+- [CSV](https://docs.python.org/3/library/csv.html)
 
 ## Usage
 
