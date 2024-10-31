@@ -1,6 +1,6 @@
 # Track Storage Selenium
 
-Playing tracks on the bandcamp.com website, accessing more tracks, and saving information about the tracks listened to a database and exporting it to a .csv file.`
+Playing tracks on the bandcamp.com website, accessing more tracks, and saving information about the tracks listened to a database and exporting it to a `CSV` file.
 
 - Track Website: [bandcamp.com](https://bandcamp.com/)
   
