@@ -135,7 +135,7 @@ class BandLeader():
                 dbwriter.writerow(list(entry))
 
 
-path = "/Users/ubeydgur/Projects/python/web-scraping-projects/track-storage-selenium/database.csv"
+path = "data/database.csv"
 
 if __name__ == "__main__":
     band_leader = BandLeader(path)
